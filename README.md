@@ -2,7 +2,7 @@
 
 This repository contains code required to reproduce the results presented in:
 
-> Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R., (2026). Geospatial foundation model embeddings detect old-growth forests but lose their comparative advantage under buffered spatial validation, doi:TBC.
+> Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R., (2026). Geospatial embeddings detect old-growth forests but buffered spatial validation narrows their advantage over Sentinel features, doi:TBC.
 
 Use this repository to:
 
@@ -193,7 +193,7 @@ Please cite both the paper and the dataset if using the old-growth forest refere
 
 Paper:
 
-> Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R., TBC. Geospatial foundation model embeddings detect old-growth forests but lose their comparative advantage under buffered spatial validation. doi:TBC
+> Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R., (2026). Geospatial embeddings detect old-growth forests but buffered spatial validation narrows their advantage over Sentinel features, doi:TBC.
 
 Data:
 > Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R., 2026. Old-growth forest reference labels and model predictions for the Făgăraș Mountains, Romania (2020, 10 m) (v1.0.0) [dataset]. Zenodo. <https://doi.org/10.5281/zenodo.22693148>
