@@ -155,6 +155,11 @@ def public_frame(comparison: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
         "ogf_ratsakatika": "OGF_binary",
     }
     frame = frame.rename(columns=rename)
+    # A parcel without a pixel centre has no probability, so its verdict is unknown, not 0:
+    # upstream ``probability >= threshold`` compares NaN as False. Null it in the public file.
+    frame["OGF_binary"] = (
+        frame["OGF_binary"].astype("boolean").mask(frame["OGF_probability"].isna())
+    )
     order = [
         "parcel_id",
         "ogf_reference_label",
@@ -204,9 +209,8 @@ def threshold_note(threshold: float, *, output: str) -> str:
             f"{value}, 0 below. " + chosen
         ),
         "vector": (
-            f"OGF_binary is 1 where OGF_probability is at or above {value}, 0 below. "
-            + chosen
-            + adjust
+            f"OGF_binary is 1 where OGF_probability is at or above {value}, 0 below, and null "
+            "where the parcel has no prediction (no pixel centre). " + chosen + adjust
         ),
     }
     return notes[output]

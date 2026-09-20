@@ -6,6 +6,7 @@ from pathlib import Path
 
 import geopandas as gpd
 import numpy as np
+import pandas as pd
 import pyogrio
 import rasterio
 from affine import Affine
@@ -20,8 +21,10 @@ def _comparison(n: int = 4) -> gpd.GeoDataFrame:
     data: dict[str, object] = {
         "parcel_id": np.arange(n),
         "reference_label": [1.0, 0.0, np.nan, 1.0],
-        "ogf_ratsakatika_probability": [0.9, 0.1, 0.5, 0.8],
-        "ogf_ratsakatika": [True, False, True, True],
+        # the last parcel has no pixel centre: no probability, and upstream's
+        # ``NaN >= threshold`` verdict of False must not reach the public file
+        "ogf_ratsakatika_probability": [0.9, 0.1, 0.5, np.nan],
+        "ogf_ratsakatika": [True, False, True, False],
         "corine_forest_type": ["broadleaf"] * n,
         "dominant_english": ["European beech"] * n,
         "total_ogf": [3, 0, 2, 4],
@@ -48,6 +51,10 @@ def test_public_frame_schema() -> None:
     for study in COMPARISON_STUDIES:
         assert not {c for c in public.columns if study in c}
     assert list(public["ogf_reference_label"]) == ["ogf", "non_ogf", None, "ogf"]
+    # Parcels without a prediction carry a null verdict, never 0.
+    assert public["OGF_binary"].dtype == "boolean"
+    assert public["OGF_binary"].tolist()[:3] == [True, False, True]
+    assert pd.isna(public["OGF_binary"].iloc[3])
 
 
 def test_write_vector_embeds_style_and_metadata(tmp_path: Path) -> None:
@@ -68,6 +75,11 @@ def test_write_vector_embeds_style_and_metadata(tmp_path: Path) -> None:
     assert meta and bfo._AUTHORS in meta[0][0]  # embedded QGIS metadata names the authors
     assert "TBC" not in meta[0][0] and bfo._DOI in meta[0][0]
     assert contents and "Forest parcels (n = 4)" in contents[0][0]
+    with sqlite3.connect(out) as con:
+        stored = con.execute(
+            "SELECT typeof(OGF_binary) FROM ogf_labels_predictions WHERE OGF_probability IS NULL"
+        ).fetchall()
+    assert stored == [("null",)]  # the no-prediction parcel is NULL in the file, not 0
     tags = pyogrio.read_info(out, layer="ogf_labels_predictions")["layer_metadata"] or {}
     assert tags["OGF_THRESHOLD"] == "0.3164"
     assert (
