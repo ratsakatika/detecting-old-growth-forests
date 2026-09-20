@@ -1,0 +1,8 @@
+{
+  "dataset": "CORINE Land Cover 2018 (Romania)",
+  "downloaded_at": "2026-05-29T07:16:14.986126+00:00",
+  "filename": "corine_clc2018_romania.gpkg",
+  "sha256": "e7f3dc1298d1fd675d0aa2968f4d5b32ab728ed2f5d10c1d4d5ccc2dd0f10750",
+  "size_bytes": 217505792,
+  "source": "CLMS API: CORINE Land Cover 2018, NUTS RO"
+}

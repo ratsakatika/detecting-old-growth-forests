@@ -1,0 +1,8 @@
+{
+  "dataset": "OpenStreetMap Romania (Geofabrik GeoPackage)",
+  "downloaded_at": "2026-05-28T17:53:54.380772+00:00",
+  "filename": "romania.gpkg",
+  "sha256": "aaf727df09a8b027c16bcf80b7b9836db5f492f99d569662773a7a2248df9c1d",
+  "size_bytes": 1338527744,
+  "source": "https://download.geofabrik.de/europe/romania-latest-free.gpkg.zip"
+}

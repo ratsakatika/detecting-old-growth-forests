@@ -1,0 +1,9 @@
+{
+  "dataset": "OpenStreetMap poland (derived from Geofabrik PBF)",
+  "downloaded_at": "2026-08-11T13:56:35.999737+00:00",
+  "filename": "poland.gpkg",
+  "note": "Geofabrik free.gpkg extract unavailable (404/stub) on 2026-08-11; roads derived from the raw PBF via GDAL OSM driver: lines with a highway tag, fclass=highway, clipped to the Carpathian massif bbox + margin (17.0, 44.45, 27.3, 50.05).",
+  "sha256": "2934d6c0877bf5a65f2f4766387f98640a925b21f833599505e077044144ac3c",
+  "size_bytes": 241946624,
+  "source": "https://download.geofabrik.de/europe/poland-latest.osm.pbf"
+}

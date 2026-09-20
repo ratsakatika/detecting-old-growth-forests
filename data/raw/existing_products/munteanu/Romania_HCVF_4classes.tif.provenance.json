@@ -1,0 +1,8 @@
+{
+  "dataset": "Munteanu et al. (2022) HCVF and forest structure",
+  "downloaded_at": "2026-05-28T22:12:54.131142+00:00",
+  "filename": "Romania_HCVF_4classes.tif",
+  "sha256": "e448224cfec2d6858a77de511da931ef6345a3f6f50dc5a7e26752d63bbdb463",
+  "size_bytes": 36448120,
+  "source": "https://doi.org/10.5281/zenodo.4555708"
+}

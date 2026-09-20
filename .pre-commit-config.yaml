@@ -1,0 +1,75 @@
+# .pre-commit-config.yaml
+# Runs on every `git commit`. Install with: pre-commit install
+# Run on all files: pre-commit run --all-files
+
+repos:
+  # --- Generic hygiene ---
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ["--maxkb=5120"]  # 5 MB
+      - id: check-case-conflict
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+
+  # --- Ruff: lint and format ---
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+      - id: ruff-format
+
+  # --- Strip notebook outputs ---
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.1
+    hooks:
+      - id: nbstripout
+
+  # --- Local hooks ---
+# --- Local hooks ---
+  - repo: local
+    hooks:
+      - id: no-ground-truth
+        name: Reject 'ground truth' terminology
+        description: Enforces 'reference labels' per AGENTS.md.
+        language: system
+        pass_filenames: false
+        entry: >-
+          bash -c 'if grep -rniI
+          --exclude-dir=archive --exclude-dir=.venv --exclude-dir=.git
+          --exclude-dir=data --exclude-dir=results --exclude-dir=figures
+          --exclude-dir=docs
+          --exclude="*.lock" --exclude="requirements-lock.txt"
+          --exclude="AGENTS.md" --exclude=".pre-commit-config.yaml"
+          "ground truth\|ground-truth\|groundtruth" .;
+          then echo "Found ground truth - use reference labels (see AGENTS.md)";
+          exit 1; fi'
+
+      - id: no-absolute-home-paths
+        name: Reject hard-coded /home/<user> paths outside utils/paths.py
+        language: system
+        pass_filenames: false
+        entry: >-
+          bash -c 'if grep -rnI --include="*.py"
+          --exclude-dir=archive --exclude-dir=.venv --exclude="paths.py"
+          "/home/[a-zA-Z0-9_-]\+/" utils/ scripts/ notebooks/ tests/ 2>/dev/null
+          | grep -v "^[^:]*:[0-9]*:\s*#";
+          then echo "Hard-coded home paths only permitted in utils/paths.py";
+          exit 1; fi'
+
+      - id: no-print-diagnostics
+        name: Reject print() in utils/ and scripts/ (use logger.info)
+        language: system
+        pass_filenames: false
+        entry: >-
+          bash -c 'if grep -rnI --include="*.py" "^\s*print(" utils/ scripts/ 2>/dev/null;
+          then echo "Use logger.info not print (see AGENTS.md hard rule 3)";
+          exit 1; fi'

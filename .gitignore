@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+.installed.cfg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_meta
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Repository-specific: data, outputs, retired code and local documents are not tracked
+data/**
+!data/**/
+!data/**/.gitkeep
+!data/**/*.provenance.json
+figures/
+results/
+archive
+docs/
+site/
+
+# Run-time artefacts, scratch workspaces and large binaries
+*.memmap
+*.h5
+*.hdf5
+*.npy
+tmp_*/
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.joblib.gz
+*.pkl
+*.pickle
+
+# Local secrets and local variants
+.env
+clms_service_key.json
+requirements-local.txt

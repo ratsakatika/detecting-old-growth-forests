@@ -1,0 +1,8 @@
+{
+  "dataset": "FABDEM V1-2",
+  "downloaded_at": "2026-08-11T13:24:24.008284+00:00",
+  "filename": "N49E020_FABDEM_V1-2.tif",
+  "sha256": "0c66076d7177acee1f2d972c90d6b1d11b5be8eb72183c6470f6d218b325e2e1",
+  "size_bytes": 26476483,
+  "source": "https://data.bris.ac.uk/datasets/s5hqmjcdj8yo2ibzi9b4ew3sn/N40E020-N50E030_FABDEM_V1-2.zip"
+}

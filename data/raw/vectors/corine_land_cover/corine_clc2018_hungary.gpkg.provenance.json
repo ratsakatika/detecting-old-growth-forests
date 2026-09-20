@@ -1,0 +1,8 @@
+{
+  "dataset": "CORINE Land Cover 2018 (hungary)",
+  "downloaded_at": "2026-08-11T13:49:13.975529+00:00",
+  "filename": "corine_clc2018_hungary.gpkg",
+  "sha256": "e94fe835f2a3352b4d2cd03caccb1018500269b254ea038a6e01b789d22ab4c6",
+  "size_bytes": 99909632,
+  "source": "CLMS API: CORINE Land Cover 2018, NUTS HU"
+}

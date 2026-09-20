@@ -1,0 +1,8 @@
+{
+  "dataset": "European mountain areas (EEA, 2008)",
+  "downloaded_at": "2026-05-28T22:56:38.354836+00:00",
+  "filename": "m_massifs_v1.shp",
+  "sha256": "b6136eb14fd2d9df9f6b4ba2a508cc1a95f58907b757fc26d8bb0c22efd8b9b3",
+  "size_bytes": 2984344,
+  "source": "https://www.eea.europa.eu/en/datahub/datahubitem-view/48b6f8a7-9e5a-4865-bd05-59c29348b5fb"
+}

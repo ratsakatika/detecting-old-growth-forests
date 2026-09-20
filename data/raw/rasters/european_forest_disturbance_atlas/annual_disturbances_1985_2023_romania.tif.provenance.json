@@ -1,0 +1,8 @@
+{
+  "dataset": "European Forest Disturbance Atlas (Romania)",
+  "downloaded_at": "2026-05-28T18:22:32.138076+00:00",
+  "filename": "annual_disturbances_1985_2023_romania.tif",
+  "sha256": "2e7ee9c6824b80b6d7781da3490c025275c7074389f06b10b06d3697cfc165f4",
+  "size_bytes": 109505484,
+  "source": "https://zenodo.org/records/13333034/files/romania.zip?download=1"
+}

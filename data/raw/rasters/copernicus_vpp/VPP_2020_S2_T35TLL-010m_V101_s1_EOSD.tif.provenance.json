@@ -1,0 +1,15 @@
+{
+  "api": "WEkEO HDA",
+  "dataset": "EO:EEA:DAT:CLMS_HRVPP_VPP",
+  "downloaded_at": "2026-05-29T10:29:58.551051+00:00",
+  "filename": "VPP_2020_S2_T35TLL-010m_V101_s1_EOSD.tif",
+  "fresh_download": true,
+  "parameter": "EOSD",
+  "product_version": "V101",
+  "season": "s1",
+  "sha256": "15c265cf93c8365a9f4d05a03de8ffdd60c51bfa953c3013e3d4b52c68e3e147",
+  "size_bytes": 126441460,
+  "source": "WEkEO HDA API: Copernicus HR-VPP VPP, Season 1, 2020, fresh download",
+  "tile": "T35TLL",
+  "year": 2020
+}

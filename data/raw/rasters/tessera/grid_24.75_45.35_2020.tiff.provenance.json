@@ -1,0 +1,8 @@
+{
+  "dataset": "TESSERA embeddings (v2, 2020)",
+  "downloaded_at": "2026-09-14T10:31:15.184537+00:00",
+  "filename": "grid_24.75_45.35_2020.tiff",
+  "sha256": "7f0a8d0c1e31cd1f5d48eda101868fba00c69b41878c6d9c2c7fba315046ab42",
+  "size_bytes": 367291073,
+  "source": "https://data.source.coop/tessera/tessera/npy/v2-2B-L~beta1/2020/ via scripts.download_tessera_tiles.fetch_tiles (int8 array x per-pixel scales, georeferenced from the landmask tile), AOI bounding box"
+}

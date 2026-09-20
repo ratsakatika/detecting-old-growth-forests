@@ -1,0 +1,8 @@
+{
+  "dataset": "CORINE Land Cover 2018 (serbia)",
+  "downloaded_at": "2026-08-11T13:49:14.345520+00:00",
+  "filename": "corine_clc2018_serbia.gpkg",
+  "sha256": "fd6222c939a30d1368b5dc330b69db0445f312b596d4c8c44e776e6174787917",
+  "size_bytes": 80650240,
+  "source": "CLMS API: CORINE Land Cover 2018, NUTS SE"
+}

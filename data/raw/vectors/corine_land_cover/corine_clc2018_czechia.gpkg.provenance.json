@@ -1,0 +1,8 @@
+{
+  "dataset": "CORINE Land Cover 2018 (czechia)",
+  "downloaded_at": "2026-08-11T13:49:13.915163+00:00",
+  "filename": "corine_clc2018_czechia.gpkg",
+  "sha256": "d984a500aef3c0857654853af2f87b440ff769392843faeda43fb6abb1972c11",
+  "size_bytes": 135421952,
+  "source": "CLMS API: CORINE Land Cover 2018, NUTS CZ"
+}

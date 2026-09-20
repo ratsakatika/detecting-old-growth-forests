@@ -1,0 +1,8 @@
+{
+  "dataset": "ESA WorldCover annual composites 2020",
+  "downloaded_at": "2026-05-28T20:29:51.109846+00:00",
+  "filename": "ESA_WorldCover_10m_2020_v100_N45E024_S1VVVHratio.tif",
+  "sha256": "ad4be3ab5a6f77ef09fcd8e59b451616b40946da91e38e0cc0c5d2e6eae78c2f",
+  "size_bytes": 338300086,
+  "source": "https://esa-worldcover-s1.s3.eu-central-1.amazonaws.com/vvvhratio/2020/N45/ESA_WorldCover_10m_2020_v100_N45E024_S1VVVHratio.tif"
+}

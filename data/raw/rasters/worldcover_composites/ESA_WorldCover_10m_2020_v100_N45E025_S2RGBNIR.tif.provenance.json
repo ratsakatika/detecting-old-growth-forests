@@ -1,0 +1,8 @@
+{
+  "dataset": "ESA WorldCover annual composites 2020",
+  "downloaded_at": "2026-05-28T20:29:10.654571+00:00",
+  "filename": "ESA_WorldCover_10m_2020_v100_N45E025_S2RGBNIR.tif",
+  "sha256": "0f1b6be4ec415e79d69bb84315e74358d31a088669380b4ce35d1253e5ebf881",
+  "size_bytes": 444594409,
+  "source": "https://esa-worldcover-s2.s3.eu-central-1.amazonaws.com/rgbnir/2020/N45/ESA_WorldCover_10m_2020_v100_N45E025_S2RGBNIR.tif"
+}

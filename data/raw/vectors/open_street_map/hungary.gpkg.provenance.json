@@ -1,0 +1,8 @@
+{
+  "dataset": "OpenStreetMap hungary (Geofabrik GeoPackage)",
+  "downloaded_at": "2026-08-11T13:31:27.211546+00:00",
+  "filename": "hungary.gpkg",
+  "sha256": "2182a4ab60c18f02e1aa9f1a65fedb6e624638da767c5b77aacd4be661849629",
+  "size_bytes": 1356423168,
+  "source": "https://download.geofabrik.de/europe/hungary-latest-free.gpkg.zip"
+}

@@ -1,0 +1,9 @@
+{
+  "dataset": "OpenStreetMap czech-republic (derived from Geofabrik PBF)",
+  "downloaded_at": "2026-08-11T13:54:37.928454+00:00",
+  "filename": "czech-republic.gpkg",
+  "note": "Geofabrik free.gpkg extract unavailable (404/stub) on 2026-08-11; roads derived from the raw PBF via GDAL OSM driver: lines with a highway tag, fclass=highway, clipped to the Carpathian massif bbox + margin (17.0, 44.45, 27.3, 50.05).",
+  "sha256": "3005190851d033173511b62d0cb52c37ba4ab8d6c375e7a8ac89c67ae893492a",
+  "size_bytes": 105107456,
+  "source": "https://download.geofabrik.de/europe/czech-republic-latest.osm.pbf"
+}

@@ -1,0 +1,15 @@
+{
+  "api": "WEkEO HDA",
+  "dataset": "EO:EEA:DAT:CLMS_HRVPP_VPP",
+  "downloaded_at": "2026-05-29T10:29:58.275021+00:00",
+  "filename": "VPP_2020_S2_T34TGR-010m_V101_s1_SOSV.tif",
+  "fresh_download": true,
+  "parameter": "SOSV",
+  "product_version": "V101",
+  "season": "s1",
+  "sha256": "46fb620a78ee3aa7c97274e64fc9e1dd45ec3b1251c28f8a06df661732b5646b",
+  "size_bytes": 226775866,
+  "source": "WEkEO HDA API: Copernicus HR-VPP VPP, Season 1, 2020, fresh download",
+  "tile": "T34TGR",
+  "year": 2020
+}

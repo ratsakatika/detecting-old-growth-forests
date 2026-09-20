@@ -1,0 +1,8 @@
+{
+  "dataset": "Munteanu et al. (2022) HCVF and forest structure",
+  "downloaded_at": "2026-05-28T22:12:54.245325+00:00",
+  "filename": "Romania_forest_continuity_1955-2018.tif",
+  "sha256": "52353451192c492c70bd419104b9c00a6b5a0539589c08c30fde3143dcb34f63",
+  "size_bytes": 27452486,
+  "source": "https://doi.org/10.5281/zenodo.4555708"
+}

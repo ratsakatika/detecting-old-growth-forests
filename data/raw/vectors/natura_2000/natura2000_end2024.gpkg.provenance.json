@@ -1,0 +1,8 @@
+{
+  "dataset": "Natura 2000 (EEA), end 2024",
+  "downloaded_at": "2026-05-28T17:40:55.125428+00:00",
+  "filename": "natura2000_end2024.gpkg",
+  "sha256": "fc947b015a71e87be1cec3d255ba6f0c41dc434649984476beed88e537964f42",
+  "size_bytes": 1360171008,
+  "source": "https://sdi.eea.europa.eu/datashare/s/mwzs9eNsJ9Sn4Q4/download?path=%2F&files=Natura2000_end2024.gpkg"
+}

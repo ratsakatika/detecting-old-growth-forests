@@ -1,0 +1,8 @@
+{
+  "dataset": "OpenStreetMap slovakia (Geofabrik GeoPackage)",
+  "downloaded_at": "2026-08-11T13:31:07.868139+00:00",
+  "filename": "slovakia.gpkg",
+  "sha256": "f41b8a603b73df386d24ff26f058fae6355f8cebcc78af76d2072d166d521f60",
+  "size_bytes": 1239048192,
+  "source": "https://download.geofabrik.de/europe/slovakia-latest-free.gpkg.zip"
+}

@@ -1,0 +1,8 @@
+{
+  "dataset": "WorldClim 2.1",
+  "downloaded_at": "2026-05-28T20:24:28.296297+00:00",
+  "filename": "wc2.1_30s_bio_12.tif",
+  "sha256": "6df0ef2f57f900733a569fcc4c8debd27b490978c5d82c2970485f0e66abbf28",
+  "size_bytes": 487101349,
+  "source": "https://geodata.ucdavis.edu/climate/worldclim/2_1/base/wc2.1_30s_bio.zip"
+}

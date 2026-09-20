@@ -1,0 +1,91 @@
+# pyproject.toml
+# Project metadata + Ruff/pytest configuration for old-growth-forests-publication.
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "old-growth-forests-publication"
+version = "0.0.0"  # placeholder; real version pinned at the v0.1 tag (Stage 11)
+requires-python = ">=3.12"
+# Runtime dependencies are intentionally not listed here. They are managed via
+# requirements.txt / requirements-lock.txt (pip-compile), which stays the single
+# source of truth. This table exists only to make `utils` importable.
+
+[tool.setuptools.packages.find]
+include = ["utils*"]
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [
+    "archive",
+    ".venv",
+    "data",
+    "results",
+    "figures",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "W",   # pycodestyle warnings
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "D",   # pydocstyle
+    "RUF", # ruff-specific
+]
+ignore = [
+    "D100",  # missing docstring in public module
+    "D104",  # missing docstring in public package
+    "D203",  # 1 blank line required before class docstring (conflicts with D211)
+    "D213",  # multi-line docstring summary should start at the second line (conflicts with D212)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pep8-naming]
+# Uppercase ``X`` for a feature matrix is the universal scikit-learn / ML
+# convention; allow it (and its train/val variants) as argument and variable
+# names without triggering N803/N806.
+extend-ignore-names = ["X", "X_train", "X_val"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["D"]
+"scripts/**/*.py" = ["D100"]
+"utils/__init__.py" = ["F401"]
+# E501: notebooks hold LaTeX snippets and long text strings that are emitted verbatim.
+"notebooks/**/*.ipynb" = ["D", "E402", "F401", "B018", "E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "slow: tests that take more than 10 seconds",
+    "requires_data: tests that need data/raw symlinks",
+    "requires_gpu: tests that need CUDA",
+]
+addopts = "-ra --strict-markers"
+
+[tool.coverage.run]
+# Data-orchestration scripts (long-running, data-dependent) are validated by
+# pre-commit, mypy and a --dry-run, not unit coverage; excluding them keeps the
+# 98% floor applying to utils, which stays at 100%.
+omit = ["scripts/*"]
+
+[tool.mypy]
+python_version = "3.12"
+# The geospatial and modelling stack (geopandas, rasterio, pyproj, shapely, xgboost,
+# torch, ...) ships without type stubs; ignore those imports rather than vendor stubs.
+# This is the static type-check run over utils/ and scripts/ (make ci).
+ignore_missing_imports = true
+warn_unused_ignores = true

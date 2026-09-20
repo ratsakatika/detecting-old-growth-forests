@@ -1,0 +1,68 @@
+# requirements.txt
+# Generate the full lock file with:
+#   pip-compile requirements.txt -o requirements-lock.txt
+
+# --- API access ---
+PyJWT>=2.8,<3
+python-dotenv>=1.0,<2
+earthengine-api>=1.0,<2      # Google Earth Engine Python client
+xee>=0.0.20,<0.1             # xarray backend for Earth Engine (high-volume endpoint)
+geotessera>=0.8,<0.9        # TESSERA embedding download
+
+
+# --- Core scientific stack ---
+numpy>=2.2,<2.3              # archive: 2.2.4
+pandas>=2.2,<2.4             # archive: 2.3.3
+scipy>=1.13,<1.16            # archive: 1.15.2
+scikit-learn>=1.7,<1.8       # archive: 1.7.2
+
+# --- Geospatial ---
+rasterio>=1.4,<1.5           # archive: 1.4.3
+geopandas>=1.0,<1.1          # DELIBERATE UPGRADE from archive's 0.14.4
+                             # (pyogrio backend). Audit ported calls on Day 3.
+shapely>=2.0,<2.2            # archive: 2.1.2
+pyproj>=3.6,<3.8             # archive: 3.7.2
+fiona>=1.10,<1.11            # archive: 1.10.1
+rioxarray>=0.17,<0.21        # archive: 0.20.0
+xarray>=2024.6,<2026.1       # archive: 2025.10.1
+
+# --- Modelling ---
+xgboost>=3.2,<3.3            # CRITICAL: archive 3.2.0; 2.x was never tested
+torch>=2.4,<2.7              # archive: 2.6.0
+optuna>=4.0,<4.8             # archive: 4.7.0
+
+# --- Spatial autocorrelation ---
+scikit-gstat>=1.0,<1.2       # archive: 1.0.23 (imports as `skgstat`)
+esda>=2.6,<2.9               # archive: 2.8.1
+libpysal>=4.12,<4.15         # archive: 4.14.1
+# gstools removed: not imported anywhere in archive.
+
+# --- IO and serialisation ---
+pyarrow>=17.0,<22.0          # archive: 21.0.0
+h5py>=3.11,<3.16             # archive: 3.15.1
+pyyaml>=6.0,<6.2             # archive: 6.0.2
+
+# --- Progress bars ---
+tqdm>=4.66,<4.68             # archive: 4.67.1 (imported in archive/scripts/002,003,004,016)
+
+# --- Reproducibility / tracking ---
+joblib>=1.4,<1.5             # archive: 1.4.2
+
+# --- Plotting ---
+matplotlib>=3.9,<3.11        # archive: 3.10.1
+pikepdf>=9.0,<11             # re-encodes figure rasters as JPEG (utils.style.save_figure)
+pillow>=10.0,<13             # JPEG encoder for the above; also a matplotlib dependency
+
+# --- Notebooks ---
+jupyterlab>=4.2,<4.4
+ipywidgets>=8.1,<8.2
+nbconvert>=7.16,<7.17
+
+# --- Tooling ---
+ruff>=0.7,<0.9
+pre-commit>=3.8,<4.1
+nbstripout>=0.7,<0.9
+pytest>=8.3,<8.4
+pytest-cov>=6.0,<7          # coverage measurement and the CI coverage floor
+mypy>=1.11,<2               # static type-checking of utils/ and scripts/ in CI
+pip-tools>=7.5,<7.6

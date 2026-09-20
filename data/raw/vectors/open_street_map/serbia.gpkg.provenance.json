@@ -1,0 +1,8 @@
+{
+  "dataset": "OpenStreetMap serbia (Geofabrik GeoPackage)",
+  "downloaded_at": "2026-08-11T13:32:02.143839+00:00",
+  "filename": "serbia.gpkg",
+  "sha256": "c0606848de18bd21006a6b10c061d06923b4ee0f2bee461677aec4bcf6c4468c",
+  "size_bytes": 974266368,
+  "source": "https://download.geofabrik.de/europe/serbia-latest-free.gpkg.zip"
+}

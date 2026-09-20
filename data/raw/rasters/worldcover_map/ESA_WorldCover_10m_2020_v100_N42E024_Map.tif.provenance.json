@@ -1,0 +1,8 @@
+{
+  "dataset": "ESA WorldCover 10 m 2020 v100 classification map",
+  "downloaded_at": "2026-08-11T13:46:11.202679+00:00",
+  "filename": "ESA_WorldCover_10m_2020_v100_N42E024_Map.tif",
+  "sha256": "8d966352927a13390855b8d0e6c5bc795c9d40d0543ed0ad7e3d38462684fe50",
+  "size_bytes": 80262337,
+  "source": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v100/2020/map/ESA_WorldCover_10m_2020_v100_N42E024_Map.tif"
+}

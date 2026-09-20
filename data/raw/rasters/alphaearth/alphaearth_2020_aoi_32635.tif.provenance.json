@@ -1,0 +1,8 @@
+{
+  "dataset": "AlphaEarth Foundations (2020)",
+  "downloaded_at": "2026-05-31T12:14:37.686943+00:00",
+  "filename": "alphaearth_2020_aoi_32635.tif",
+  "sha256": "2370807feb6ce54fb529fc264cfcd0e5588c176743ce301451927057525e14b2",
+  "size_bytes": 4892610562,
+  "source": "GEE high-volume endpoint: GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL, 2020, EE-side mosaic, exported in native EPSG:32635 at 10 m, WGS84 bbox from the 10 km-buffered AOI."
+}
