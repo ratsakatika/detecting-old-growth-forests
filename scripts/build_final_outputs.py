@@ -53,9 +53,9 @@ _CONTACT: Final[str] = "trr26@cam.ac.uk"
 _LICENCE: Final[str] = "CC-BY-4.0, https://creativecommons.org/licenses/by/4.0/"
 _LICENCE_NAME: Final[str] = "Creative Commons Attribution 4.0 International"
 _SOURCES: Final[str] = (
-    "Contains modified Copernicus Sentinel data (2020); TESSERA embeddings; CLMS CORINE 2018 "
-    "and HR-VPP 2020 © European Union; FABDEM (CC BY-NC-SA 4.0) and © OpenStreetMap "
-    "contributors (ODbL) used as predictors"
+    "Predictors: TESSERA v2 embeddings, derived from modified Copernicus Sentinel data (2020); "
+    "FABDEM (CC BY-NC-SA 4.0) and © OpenStreetMap contributors (ODbL). "
+    "CLMS CORINE 2018 © European Union supplies the forest-type attribute only"
 )
 _DOI: Final[str] = "10.5281/zenodo.22693148"
 _DOI_URL: Final[str] = f"https://doi.org/{_DOI}"
