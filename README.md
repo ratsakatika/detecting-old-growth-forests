@@ -2,14 +2,14 @@
 
 This repository contains code required to reproduce the results presented in:
 
-> Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R., (2026). Geospatial embeddings detect old-growth forests but buffered spatial validation narrows their advantage over Sentinel features, doi:TBC.
+> Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R. (2026). Geospatial embeddings detect old-growth forests but buffered spatial validation narrows their advantage over Sentinel features. arXiv preprint. doi:TBC.
 
 Use this repository to:
 
 - **Download and pre-process the public prediction datasets:** Natura 2000 boundaries, road and footpath vectors, forest disturbances (1985–2023), coniferous/broadleaf/mixed forest cover, Digital Elevation Model with forests and buildings removed (FABDEM), Sentinel-1/2 annual composites and vegetation indices, AlphaEarth 64-dimension embeddings, TESSERA v2 128-dimension embeddings.
 - **Construct old-growth and non-old-growth forest reference labels** from forest management plans if available, otherwise download from:
 
-    > Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R., 2026. Old-growth forest reference labels and model predictions for the Făgăraș Mountains, Romania (2020, 10 m) (v1.0.0) [dataset]. Zenodo. <https://doi.org/10.5281/zenodo.22693148>
+    > Ratsakatika, T., Zotta, M., Keshav, S., Lines, E.R. (2026). Old-growth forest reference labels and model predictions for the Făgăraș Mountains, Romania (2020, 10 m) (v1.0.0) [dataset]. Zenodo. <https://doi.org/10.5281/zenodo.22693148>
 
 - **Run spatially blocked nested cross-validation** with incremental buffers from 0–30 km between the training and test labels.
 
