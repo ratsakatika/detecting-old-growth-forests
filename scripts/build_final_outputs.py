@@ -50,8 +50,10 @@ _LOGGER_NAME: Final[str] = "build_final_outputs"
 # --- Citation and rights, shared by every output (GDAL -mo tags, gpkg_metadata and .qmd) ---
 _AUTHORS: Final[str] = "Thomas Ratsakatika, Mihai Zotta, Srinivasan Keshav, Emily R. Lines"
 _CONTACT: Final[str] = "trr26@cam.ac.uk"
-_LICENCE: Final[str] = "CC-BY-4.0, https://creativecommons.org/licenses/by/4.0/"
-_LICENCE_NAME: Final[str] = "Creative Commons Attribution 4.0 International"
+_LICENCE: Final[str] = "CC-BY-NC-SA-4.0, https://creativecommons.org/licenses/by-nc-sa/4.0/"
+_LICENCE_NAME: Final[str] = (
+    "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+)
 _SOURCES: Final[str] = (
     "Predictors: TESSERA v2 embeddings, derived from modified Copernicus Sentinel data (2020); "
     "FABDEM (CC BY-NC-SA 4.0) and © OpenStreetMap contributors (ODbL). "
@@ -67,20 +69,22 @@ _CITATION: Final[str] = (
 _VERSION: Final[str] = "1.0.0"
 _REFERENCE_YEAR: Final[str] = "2020"
 _URL: Final[str] = "https://github.com/ratsakatika/detecting-old-growth-forests"
-_COPYRIGHT: Final[str] = "© 2026 T. Ratsakatika, M. Zotta, S. Keshav and E. R. Lines. CC BY 4.0."
+_COPYRIGHT: Final[str] = (
+    "© 2026 T. Ratsakatika, M. Zotta, S. Keshav and E. R. Lines. CC BY-NC-SA 4.0."
+)
 _COPYRIGHT_VECTOR: Final[str] = (
     f"{_COPYRIGHT} Reference labels and geometries derived from data compiled by "
     "Fundația Conservation Carpathia."
 )
-# The parcel geometries are third-party; CC BY 4.0 covers only what the authors added.
+# The parcel geometries are third-party; CC BY-NC-SA 4.0 covers only what the authors added.
 _RIGHTS_NOTE: Final[str] = (
-    "CC BY 4.0 applies to the authors' contributions (reference labels, predictions and "
+    "CC BY-NC-SA 4.0 applies to the authors' contributions (reference labels, predictions and "
     "compilation). Parcel geometries derive from public forest management plans and are "
     "redistributed as compiled by Fundația Conservation Carpathia; rights in the "
     "underlying plans remain with their holders."
 )
 _ACCESS_CONSTRAINT: Final[str] = "none"
-_USE_CONSTRAINT: Final[str] = "attribution (CC BY 4.0)"
+_USE_CONSTRAINT: Final[str] = "attribution, non-commercial use, share alike (CC BY-NC-SA 4.0)"
 _KEYWORDS: Final[tuple[str, ...]] = (
     "old-growth forest",
     "Carpathians",
